@@ -156,10 +156,11 @@ MongoDB stores:
 
 ## Team Members
 
-- Member 1  
-- Member 2  
-- Member 3  
-- Member 4  
+- B.Sahasra
+- A.Varshini 
+- V.Bhavya Sri 
+- Ch.Tejaswi
+- Ch.Lakshmi chaitanya  
 
 ---
 
