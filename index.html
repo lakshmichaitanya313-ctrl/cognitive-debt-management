@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<title>Cognitive Debt Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<!-- MAIN WEBSITE -->
+<div id="mainSite">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#mind">Mind</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#assessment">Assessment</a>
+  </nav>
+
+  <!-- Your existing sections -->
+  <h1>Welcome to Cognitive Debt Manager</h1>
+
+</div>
+    
+
+<!-- HOME -->
+<section id="home">
+<h1>Reduce Your Cognitive Debt. Reclaim Your Focus.</h1>
+<p>Cognitive debt is the mental overload caused by unresolved tasks, stress, and negative thinking.</p>
+
+<button onclick="scrollToSection('assessment')">Start Assessment</button>
+<button onclick="scrollToSection('about')">Learn More</button>
+
+<p>Mental Fatigue</p>
+<div class="progress">
+<div id="fatigueBar"></div>
+</div>
+
+<p>Procrastination</p>
+<div class="progress">
+<div id="procBar"></div>
+</div>
+
+<p>Overthinking</p>
+<div class="progress">
+<div id="overBar"></div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>What is Cognitive Debt?</h2>
+<p>Cognitive debt is the accumulation of unresolved mental tasks, stressors, and negative thought patterns that reduce mental performance.</p>
+
+<h3>Causes</h3>
+<ul>
+<li>Multitasking</li>
+<li>Procrastination</li>
+<li>Stress</li>
+<li>Overthinking</li>
+</ul>
+
+<h3>Effects</h3>
+<ul>
+<li>Poor concentration</li>
+<li>Anxiety</li>
+<li>Burnout</li>
+</ul>
+</section>
+
+<!-- ASSESSMENT -->
+<section id="assessment">
+<h2>Check Your Cognitive Debt</h2>
+
+<p>I feel mentally exhausted</p>
+<select id="q1">
+<option value="1">Never</option>
+<option value="2">Sometimes</option>
+<option value="3">Often</option>
+<option value="4">Always</option>
+</select>
+
+<p>I delay important tasks</p>
+<select id="q2">
+<option value="1">Never</option>
+<option value="2">Sometimes</option>
+<option value="3">Often</option>
+<option value="4">Always</option>
+</select>
+
+<p>I overthink small issues</p>
+<select id="q3">
+<option value="1">Never</option>
+<option value="2">Sometimes</option>
+<option value="3">Often</option>
+<option value="4">Always</option>
+</select>
+
+<p>I feel overwhelmed</p>
+<select id="q4">
+<option value="1">Never</option>
+<option value="2">Sometimes</option>
+<option value="3">Often</option>
+<option value="4">Always</option>
+</select>
+
+<br><br>
+<button onclick="calculateDebt()">Calculate My Debt</button>
+</section>
+
+<!-- RESULT -->
+<section id="result">
+<h2>Debt Breakdown</h2>
+
+<p id="scoreText"></p>
+<p id="levelText"></p>
+
+<div class="bar">Mental Fatigue <span id="fatigue"></span>%</div>
+<div class="bar">Procrastination <span id="procrastination"></span>%</div>
+<div class="bar">Overthinking <span id="overthinking"></span>%</div>
+</section>
+<!-- MIND INPUT -->
+<section id="mind">
+<h2>What's On Your Mind?</h2>
+
+<textarea id="mindText" placeholder="Type your thoughts here..." rows="6" cols="40"></textarea>
+<br><br>
+
+<button onclick="analyzeMind()">Analyze My Mind</button>
+
+<p id="stressResult"></p>
+<p id="quoteResult"></p>
+
+<canvas id="stressChart" width="250" height="250"></canvas>
+</section>
+
+<!-- RECOVERY -->
+<section id="recovery">
+<h2>Your Recovery Plan</h2>
+
+<h3>Today (Micro Steps)</h3>
+<ul>
+<li>5 minutes deep breathing</li>
+<li>Write only ONE important task</li>
+<li>Drink water and stretch</li>
+</ul>
+
+<h3>This Week</h3>
+<ul>
+<li>Reduce social media time</li>
+<li>Sleep at same time daily</li>
+<li>Short walk every day</li>
+</ul>
+
+<h3>Mindset Shift</h3>
+<ul>
+<li>Progress over perfection</li>
+<li>One step at a time</li>
+</ul>
+
+<button onclick="startRecovery()">Start Recovery</button>
+</section>
+
+<!-- PROGRESS -->
+<section id="progress">
+<h2>Progress Tracker</h2>
+<p id="day1"></p>
+<p id="day7"></p>
+</section>
+<canvas id="chart" width="230" height="90"></canvas>
+
+<script src="script.js"></script>
+
+</body>
+</html>
